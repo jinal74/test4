@@ -6,12 +6,12 @@ const initialValue = {
     isLoading: false
 }
 
-export const authReducer = (state = initialValue, action) => {
+export const LoginReducer = (state = initialValue, action) => {
     switch (action.type) {
         case ActionTypes.ADD_LOGIN_USER:
             return {
                 ...state,
-                login: state.auth.concat(action.payload),
+                login: action.payload,
                 errorMsg: '',
                 isLoading: false
             }
